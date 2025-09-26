@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repuestos - Go Autos </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="banner-cabecera">
+            <div class="container">
+                <a href="index.php" class="logo">
+                    <img src="Images/logo_goautos.jpg" alt="Go Autos" />
+                </a>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="https://goautos.com.ar/clasificados">Clasificados</a></li>
+                        <li><a href="https://goautos.com.ar/en-tu-zona">En tu zona</a></li>
+                        <li><a href="https://goautos.com.ar/go-concesionarios">Concesionarios</a></li>
+                        <li><a href="https://goautos.com.ar/servicios">Servicios</a></li>
+                        <li><button>VENDER</button></li>
+                        <li><button id="boton2">INICIAR SESIÓN</button></li>
+
+                    </ul>
+
+                </nav>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- Buscador -->
+        <section class="buscador">
+            <input type="text" placeholder="¿Qué repuesto buscás?" />
+            <button>Buscar</button>
+        </section>
+
+        <!-- Catálogo -->
+        <section class="catalogo">
+            <!-- Panel de filtros -->
+            <aside class="filtros">
+                <h3>Filtros</h3>
+                <label><input type="checkbox"> Mangueras</label><br>
+                <label><input type="checkbox"> Accesorios</label><br>
+                <label><input type="checkbox"> Repuestos</label>
+            </aside>
+
+            <!-- Grilla de productos -->
+            <section class="productos">
+                <article class="producto">
+                    <img src="Images/goautos_big_publicaciones_29247_1688514994_1_402.jpg" alt="Manguera 1">
+                    <div class="producto-info">
+                        <h4>KIT DISTRIBUCIÓN</h4>
+                        <p class="p1"><b>Kilómetros:</b>0 Km</p>
+                        <p class="p1"><b>Carroceria:</b>5ptas</p>
+                        <p class="p1"><b>Año:</b>2011</p>
+                        <p class="p1"><b>Condición:</b>Nuevo</p>
+                        <p class="p1"><b>Combustible:</b>Nafta</p>
+                    </div>
+                    <button class="verMas">Ver más</button>
+
+                </article>
+
+
+                <article class="producto">
+                    <img src="Images/goautos_big_publicaciones_29341_1741956794_1_857.jpg" alt="Manguera 2">
+                    <div class="producto-info">
+                        <h4>MANGUERA TOMA DE AIRE, FILTRO A MOTOR HONDA ACCORD 2.4 Gasolina-L4 2.4L 2003/2007</h4>
+                        <p class="p1"><b>Kilómetros:</b>0 Km</p>
+                        <p class="p1"><b>Carroceria:</b>4ptas</p>
+                        <p class="p1"><b>Año:</b>2025</p>
+                        <p class="p1"><b>Condición:</b>Nuevo</p>
+                        <p class="p1"><b>Combustible:</b>Nafta</p>
+                    </div>
+                    <button class="verMas">Ver más</button>
+
+                </article>
+
+                <article class="producto">
+                    <img src="Images/goautos_big_publicaciones_29340_1741956345_1_877.jpg" alt="Manguera 2">
+                    <div class="producto-info">
+                        <h4>MANGUERA INTERCOOLER MERCEDES BENZ SPRINTER 313 3.0 Turbo diesel 2002/2013</h4>
+                        <p class="p1"><b>Kilómetros:</b>0 Km</p>
+                        <p class="p1"><b>Carroceria:</b>2ptas</p>
+                        <p class="p1"><b>Año:</b>2025</p>
+                        <p class="p1"><b>Condición:</b>Nuevo</p>
+                        <p class="p1"><b>Combustible:</b>Diesel</p>
+                    </div>
+                    <button class="verMas">Ver más</button>
+
+                </article>
+
+            </section>
+
+            <aside class="contacto">
+                <h4>ENVIAR MENSAJE AL VENDEDOR</h4>
+                <form class="form-contacto" action="#" method="post">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                    <small class="sugerencia">Ingresá tu nombre completo</small>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 351 1234567" required>
+                    <small class="sugerencia">Incluí código de área</small>
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ej: usuario@gmail.com" required>
+                    <small class="sugerencia">Usá un email válido, lo necesitaremos para responderte</small>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos en qué estás interesado..."
+                        required></textarea>
+
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </aside>
+            <a href="https://wa.me/5493515523962" class="btn-whatsapp" target="_blank"
+                aria-label="Contactar por WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <a href="index.php" class="logo">
+                <img src="Images/logo_goautos.jpg" alt="Go Autos" />
+            </a>
+            <nav class="menu">
+                <ul>
+                    <li><a href="https://goautos.com.ar/clasificados">Clasificados</a></li>
+                    <li><a href="https://goautos.com.ar/en-tu-zona">En tu zona</a></li>
+                    <li><a href="https://goautos.com.ar/go-concesionarios">Concesionarios</a></li>
+                    <li><a href="https://goautos.com.ar/servicios">Servicios</a></li>
+                    <li><a href="https://goautos.com.ar/contacto">Contacto</a></li>
+                    <button>VENDER</button>
+                    <button id="boton2">INICIAR SESIÓN</button>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                El uso de este sitio web implica la aceptación de los
+                Términos y Condiciones y de las Políticas de Privacidad de goautos.com.ar <br>
+
+                ©2015-2025 goautos.com.ar. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
