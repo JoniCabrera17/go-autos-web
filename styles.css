@@ -1,179 +1,196 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .banner-cabecera {
-    background-color: #005f9e;
-    background-image: repeating-linear-gradient(-45deg,
-            /* líneas diagonales hacia la izquierda */
-            rgba(0, 0, 0, 0.2),
-            /* color de las líneas, negro semi-transparente */
-            rgba(0, 0, 0, 0.2) 1px,
-            /* grosor de la línea */
-            transparent 5px,
-            /* espacio entre líneas */
-            transparent 5px
-            /* repetir cada 10px */
-        );
-    height: 175px;
-    /* Ajusta según necesites */
-    display: flex;
-    justify-content: center;
-    /* centra horizontalmente */
-    align-items: center;
-    /* centra verticalmente */
-    padding: 25px;
-    /* opcional, para separarlo un poco del borde */
+  background-color: #005f9e;
+  background-image: repeating-linear-gradient(-45deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 5px,
+      transparent 5px);
+  min-height: 80px;
+  /* altura mínima */
+  padding: 20px;
+  /* espacio adaptable */
+  display: flex;
+  justify-content: center;
+  /* centra horizontal */
+  align-items: center;
+  /* centra vertical */
+  flex-wrap: wrap;
+  /* permite salto de línea */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+  .banner-cabecera,
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 10px;
+  }
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    /* Ajusta este valor según lo que necesites */
-    margin: 0 auto;
-    /* Esto centra el contenedor horizontalmente */
-    display: flex;
-    justify-content: space-between;
-    /* Para separar logo y menú */
-    align-items: center;
-    padding: 15px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  /* Ajusta este valor según lo que necesites */
+  margin: 0 auto;
+  /* Esto centra el contenedor horizontalmente */
+  display: flex;
+  justify-content: space-between;
+  /* Para separar logo y menú */
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu ul {
-    display: flex;
-    list-style: none;
-    margin-right: 20px;
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
 
-    align-items: center;
+  align-items: center;
 
 }
 
 .menu ul a {
-    margin: 10px;
-    text-decoration: none;
-    color: #005f9e;
+  margin: 10px;
+  text-decoration: none;
+  color: #005f9e;
 }
 
 .menu ul a:hover {
-    color: #512a42;
+  color: #512a42;
 }
 
 .menu ul a.active {
-    color: #512a42;
+  color: #512a42;
 }
 
 .menu button {
-    display: flex;
-    background-color: #c41414;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    /* transición suave */
-    font-weight: bold;
-    margin-right: 5px;
-    border: none
+  display: flex;
+  background-color: #c41414;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* transición suave */
+  font-weight: bold;
+  margin-right: 5px;
+  border: none;
 }
 
 .menu button:hover {
-    display: flex;
-    background-color: #b9b9b9;
-    font-weight: bold;
-    color: #512a42;
+  display: flex;
+  background-color: #b9b9b9;
+  font-weight: bold;
+  color: #512a42;
 
 }
 
 #boton2 {
-    display: flex;
-    background-color: #512a42;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    /* transición suave */
-    font-weight: bold;
+  display: flex;
+  background-color: #512a42;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* transición suave */
+  font-weight: bold;
+
+  
 }
 
 #boton2:hover {
-    display: flex;
-    background-color: #b9b9b9;
-    font-weight: bold;
-    color: #512a42;
+  display: flex;
+  background-color: #b9b9b9;
+  font-weight: bold;
+  color: #512a42;
 
 }
 
 .footer {
-    background: linear-gradient(to bottom, #d6d6d6 0% 50%, #005f9e 50% 100%);
+  background: linear-gradient(to bottom, #d6d6d6 0% 50%, #005f9e 50% 100%);
 
-    height: 175px;
-    /* Ajusta según necesites */
-    display: flex;
-    justify-content: center;
-    /* centra horizontalmente */
-    align-items: center;
-    /* centra verticalmente */
-    padding: 25px;
-    /* opcional, para separarlo un poco del borde */
-    flex-direction: column;
+  height: 175px;
+  /* Ajusta según necesites */
+  display: flex;
+  justify-content: center;
+  /* centra horizontalmente */
+  align-items: center;
+  /* centra verticalmente */
+  padding: 25px;
+  /* opcional, para separarlo un poco del borde */
+  flex-direction: column;
 }
 
 .container-footer {
-    width: 100%;
-    max-width: 1200px;
-    /* Ajusta este valor según lo que necesites */
-    margin: 0 auto;
-    /* Esto centra el contenedor horizontalmente */
-    display: flex;
-    justify-content: space-between;
-    /* Para separar logo y menú */
-    align-items: center;
-    padding: 15px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  /* Ajusta este valor según lo que necesites */
+  margin: 0 auto;
+  /* Esto centra el contenedor horizontalmente */
+  display: flex;
+  justify-content: space-between;
+  /* Para separar logo y menú */
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 14px;
-    color: #d6d6d6;
-    font-family: "Roboto", sans-serif;
-    font-size: 10px;
-    
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #d6d6d6;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+
 }
 
 .catalogo {
   display: grid;
-  grid-template-columns: 150px 1fr 250px; /* filtros a la izquierda, productos a la derecha */
+  grid-template-columns: 150px 1fr 250px;
+  /* filtros a la izquierda, productos a la derecha */
   gap: 20px;
   padding: 20px;
-  max-width: 1200px;   /* igual que el sitio original */
-  margin: 0 auto;      /* centra el contenedor */
-  align-items: start;   /* 👈 cada columna se ajusta a su propio contenido */
+  max-width: 1200px;
+  /* igual que el sitio original */
+  margin: 0 auto;
+  /* centra el contenedor */
+  align-items: start;
+  /* 👈 cada columna se ajusta a su propio contenido */
 }
 
 .filtros {
   background: #f7f7f7;
   padding: 15px;
   border-radius: 10px;
-  font-family: "Roboto", sans-serif;;
+  font-family: "Roboto", sans-serif;
+  ;
 }
 
 .productos {
   display: grid;
- grid-template-columns: repeat(3, minmax(0, 1fr)); /* evita que el contenido estire la columna */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* evita que el contenido estire la columna */
   gap: 20px;
   font-family: "Roboto", sans-serif;
 }
@@ -185,38 +202,43 @@
   text-align: center;
   transition: 0.3s;
   background: #b9b9b97e;
-  
+  max-width: 100%;
+  overflow: hidden;
+
 }
 
 .producto:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .producto img {
-    width: 100%;
-    height: 180px; /* altura fija para todas las imágenes */
-    object-fit: cover; /* mantiene proporción y recorta si es necesario */
-    border-radius: 8px;
-    display: block;
-    margin-bottom: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  /* altura fija para todas las imágenes */
+  object-fit: cover;
+  /* mantiene proporción y recorta si es necesario */
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .producto h4 {
-  display: block;           /* asegurarse que sea un bloque */
-  width: 100%;              /* ocupa el ancho de la tarjeta */
-  overflow: hidden;         /* corta el exceso de texto */
-  text-overflow: ellipsis;  /* agrega "..." */
-  white-space: nowrap;      /* mantiene una sola línea */
+  display: block;
+  /* asegurarse que sea un bloque */
+  width: 100%;
+  /* ocupa el ancho de la tarjeta */
+  overflow: hidden;
+  /* corta el exceso de texto */
+  text-overflow: ellipsis;
+  /* agrega "..." */
+  white-space: nowrap;
+  /* mantiene una sola línea */
   margin: 5px 0;
   box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
-  .productos { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-  .productos { grid-template-columns: 1fr; }
-}
+
 
 
 
@@ -227,11 +249,12 @@
   margin: auto;
   gap: 10px;
   background-color: #b9b9b97e;
-   padding : 20px 
+  padding: 20px
 }
 
 .buscador input {
   width: 700px;
+  max-width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -253,27 +276,28 @@
 }
 
 .verMas {
-    background-color: #512a42;
-    color: #ccc;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: none;
+  background-color: #512a42;
+  color: #ccc;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
 }
 
 .verMas:hover {
-    background-color: #714b63;
-    color: white;
+  background-color: #714b63;
+  color: white;
 }
 
 /* contenedor interno para título y precio */
 .producto-info {
-  min-height: 60px; /* altura mínima para que los títulos se alineen */
-  
+  min-height: 60px;
+  /* altura mínima para que los títulos se alineen */
+
 }
 
-.producto-info h3, 
+.producto-info h3,
 .producto-info p {
   margin: 5px 0;
 }
@@ -287,7 +311,7 @@
 
 .contacto h4 {
   margin-bottom: 15px;
-  color:#c41414;
+  color: #c41414;
   border-radius: 5px;
   padding: px;
 
@@ -326,10 +350,10 @@
 }
 
 .form-contacto button:hover {
-  background-color:#714b63;
+  background-color: #714b63;
 }
 
-.p1{
+.p1 {
   font-size: small;
   color: #6d6d6d;
 }
@@ -343,8 +367,10 @@
 
 .btn-whatsapp {
   position: fixed;
-  bottom: 50px;   /* distancia desde abajo */
-  right: 50px;    /* distancia desde la derecha */
+  bottom: 50px;
+  /* distancia desde abajo */
+  right: 50px;
+  /* distancia desde la derecha */
   background-color: #25d366;
   color: white;
   font-size: 28px;
@@ -355,12 +381,112 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   transition: transform 0.2s;
-  
+
 }
 
 .btn-whatsapp:hover {
   transform: scale(1.1);
+}
+
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+  .catalogo {
+    grid-template-columns: 200px 1fr;
+    /* filtros a la izq, productos al lado */
+  }
+
+  .contacto {
+    grid-column: 1 / -1;
+    /* formulario pasa abajo */
+    margin-top: 20px;
+  }
+
+  .buscador input {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogo {
+    grid-template-columns: 1fr;
+    /* todo en 1 columna */
+  }
+
+  .filtros {
+    order: -1;
+    /* filtros arriba */
+  }
+
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .container-footer {
+    flex-direction: row;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  .buscador {
+    flex-direction: column;
+  }
+
+  .buscador input {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos {
+    grid-template-columns: 1fr;
+    /* productos de a uno */
+  }
+
+  .btn-whatsapp {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .banner-cabecera,
+  .footer {
+    height: auto;
+    /* que crezca según el contenido */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .menu button,
+  #boton2 {
+    width: 150px;       /* mismo ancho para todos */
+    padding: 10px;      /* espacio interno consistente */
+    font-size: 14px;    /* tamaño de letra */
+    display: inline-flex; /* o flex para centrar contenido */
+    justify-content: center; /* centra horizontalmente el texto */
+    text-align: center; /* por si acaso */
+  }
 }
