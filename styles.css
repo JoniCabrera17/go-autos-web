@@ -130,13 +130,14 @@
   height: 175px;
   /* Ajusta según necesites */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   /* centra horizontalmente */
   align-items: center;
   /* centra verticalmente */
-  padding: 25px;
+  padding: 15px;
   /* opcional, para separarlo un poco del borde */
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .container-footer {
