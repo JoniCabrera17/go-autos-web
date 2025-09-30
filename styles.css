@@ -130,13 +130,13 @@
   height: 175px;
   /* Ajusta según necesites */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   /* centra horizontalmente */
   align-items: center;
   /* centra verticalmente */
   padding: 15px;
   /* opcional, para separarlo un poco del borde */
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -433,7 +433,7 @@
   }
 
   .container-footer {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .menu ul {
