@@ -46,12 +46,60 @@
         <!-- Catálogo -->
         <section class="catalogo">
             <!-- Panel de filtros -->
-            <aside class="filtros">
+            <aside class="sidebar">
                 <h3>Filtros</h3>
-                <label><input type="checkbox"> Mangueras</label><br>
-                <label><input type="checkbox"> Accesorios</label><br>
-                <label><input type="checkbox"> Repuestos</label>
+                <ul class="filter-list">
+                    <li class="filter-item">
+                        <button class="filter-toggle">Familia / Categoría</button>
+                        <ul class="filter-sublist">
+                            <li><span class="chip">Manguera</span></li>
+                            <li><span class="chip">Bomba de Agua</span></li>
+                            <li><span class="chip">Deposito</span></li>
+                            <li><span class="chip">Correa</span></li>
+                        </ul>
+                    </li>
+
+                    <li class="filter-item">
+                        <button class="filter-toggle">Clasificación</button>
+                        <ul class="filter-sublist">
+                            <li><span class="chip">Leve</span></li>
+                            <li><span class="chip">Pesado</span></li>
+                            <li><span class="chip">Agricola</span></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="filter-item">
+                        <button class="filter-toggle">Tipo de Carroceria</button>
+                        <ul class="filter-sublist">
+                            <li><span class="chip">Auto y SUV</span></li>
+                            <li><span class="chip">Camión o Bus </span></li>
+
+                        </ul>
+                    </li>
+                    <li class="filter-item">
+                        <button class="filter-toggle">Marca Proveedor</button>
+                        <ul class="filter-sublist">
+                            <li><span class="chip">Cauplas</span></li>
+                            <li><span class="chip">Saxum</span></li>
+                            <li><span class="chip">Florio</span></li>
+                            <li><span class="chip">Continental</span></li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="filter-item">
+                        <button class="filter-toggle">Uso</button>
+                        <ul class="filter-sublist">
+                            <li><span class="chip">Calefacción</span></li>
+                            <li><span class="chip">Distribución</span></li>
+                            <li><span class="chip">Refrigeración</span></li>
+                        </ul>
+                    </li>
+                </ul>
             </aside>
+
 
             <!-- Grilla de productos -->
             <section class="productos">
@@ -59,11 +107,11 @@
                     <img src="Images/goautos_big_publicaciones_29247_1688514994_1_402.jpg" alt="Manguera 1">
                     <div class="producto-info">
                         <h4>KIT DISTRIBUCIÓN</h4>
-                        <p class="p1"><b>Kilómetros:</b>0 Km</p>
-                        <p class="p1"><b>Carroceria:</b>5ptas</p>
-                        <p class="p1"><b>Año:</b>2011</p>
-                        <p class="p1"><b>Condición:</b>Nuevo</p>
-                        <p class="p1"><b>Combustible:</b>Nafta</p>
+                        <p class="p1"><b>Código:</b></p>
+                        <p class="p1"><b>Marca Vehiculo:</b></p>
+                        <p class="p1"><b>Modelo:</b></p>
+                        <p class="p1"><b>Precio Lista:</b></p>
+                        <p class="p1"><b>Stock:</b></p>
                     </div>
                     <button class="verMas">Ver más</button>
 
@@ -74,11 +122,11 @@
                     <img src="Images/goautos_big_publicaciones_29341_1741956794_1_857.jpg" alt="Manguera 2">
                     <div class="producto-info">
                         <h4>MANGUERA TOMA DE AIRE, FILTRO A MOTOR HONDA ACCORD 2.4 Gasolina-L4 2.4L 2003/2007</h4>
-                        <p class="p1"><b>Kilómetros:</b>0 Km</p>
-                        <p class="p1"><b>Carroceria:</b>4ptas</p>
-                        <p class="p1"><b>Año:</b>2025</p>
-                        <p class="p1"><b>Condición:</b>Nuevo</p>
-                        <p class="p1"><b>Combustible:</b>Nafta</p>
+                        <p class="p1"><b>Código:</b></p>
+                        <p class="p1"><b>Marca Vehiculo:</b></p>
+                        <p class="p1"><b>Modelo:</b></p>
+                        <p class="p1"><b>Precio Lista:</b></p>
+                        <p class="p1"><b>Stock:</b></p>
                     </div>
                     <button class="verMas">Ver más</button>
 
@@ -88,11 +136,11 @@
                     <img src="Images/goautos_big_publicaciones_29340_1741956345_1_877.jpg" alt="Manguera 2">
                     <div class="producto-info">
                         <h4>MANGUERA INTERCOOLER MERCEDES BENZ SPRINTER 313 3.0 Turbo diesel 2002/2013</h4>
-                        <p class="p1"><b>Kilómetros:</b>0 Km</p>
-                        <p class="p1"><b>Carroceria:</b>2ptas</p>
-                        <p class="p1"><b>Año:</b>2025</p>
-                        <p class="p1"><b>Condición:</b>Nuevo</p>
-                        <p class="p1"><b>Combustible:</b>Diesel</p>
+                        <p class="p1"><b>Código:</b></p>
+                        <p class="p1"><b>Marca Vehiculo:</b></p>
+                        <p class="p1"><b>Modelo:</b></p>
+                        <p class="p1"><b>Precio Lista:</b></p>
+                        <p class="p1"><b>Stock:</b></p>
                     </div>
                     <button class="verMas">Ver más</button>
 
@@ -158,6 +206,9 @@
             </p>
         </div>
     </footer>
+
+    <script src="filtros.js"></script>
+
 
 </body>
 
