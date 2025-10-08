@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repuestos - Go Autos </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="banner-cabecera">
+            <div class="container">
+                <a href="index.php" class="logo">
+                    <img src="Images/logo_goautos.jpg" alt="Go Autos" />
+                </a>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="https://goautos.com.ar/clasificados">Clasificados</a></li>
+                        <li><a href="https://goautos.com.ar/en-tu-zona">En tu zona</a></li>
+                        <li><a href="https://goautos.com.ar/go-concesionarios">Concesionarios</a></li>
+                        <li><a href="https://goautos.com.ar/servicios">Servicios</a></li>
+                        <li><button>VENDER</button></li>
+                        <li><button id="boton2">INICIAR SESIÓN</button></li>
+
+                    </ul>
+
+                </nav>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section class="buscador">
+        <input type="text" placeholder="¿Qué repuesto buscás?" />
+        <button>Buscar</button>
+    </section>
+    <a href="index.html" class="volver">← Volver a Productos</a>
+
+    <div class="producto-detalle">
+        <img id="producto-img" src="" alt="Producto">
+        <div class="info">
+            <h2 id="producto-nombre"></h2>
+            <p><b>Código/SKU:</b> <span id="producto-codigo"></span></p>
+            <p><b>Marca Vehículo:</b> <span id="producto-marca"></span></p>
+            <p><b>Modelo:</b> <span id="producto-modelo"></span></p>
+            <p><b>Diametro:</b> <span id="producto-modelo"></span></p>
+            <p><b>N° Planos:</b> <span id="producto-modelo"></span></p>
+            <p><b>Precio Lista:</b> <span id="producto-precio"></span></p>
+            <p><b>Stock:</b> <span id="producto-stock"></span></p>
+            <p><b>Descripción:</b> <span id="producto-desc"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Datos de ejemplo visuales (luego vendrán del backend)
+        const productos = {
+            "29247": {
+                nombre: "KIT DISTRIBUCIÓN",
+                codigo: "29247",
+                marca: "Toyota",
+                modelo: "Corolla 2010",
+                precio: "$50.000",
+                stock: "10",
+                desc: "Kit completo de distribución para Toyota Corolla.",
+                img: "Images/goautos_big_publicaciones_29247_1688514994_1_402.jpg"
+            },
+            "29341": {
+                nombre: "MANGUERA TOMA DE AIRE HONDA ACCORD 2.4",
+                codigo: "29341",
+                marca: "Honda",
+                modelo: "Accord 2.4 2003/2007",
+                precio: "$15.000",
+                stock: "5",
+                desc: "Manguera de aire para filtro a motor Honda Accord.",
+                img: "Images/goautos_big_publicaciones_29341_1741956794_1_857.jpg"
+            },
+            "29340": {
+                nombre: "MANGUERA INTERCOOLER MERCEDES BENZ SPRINTER 313",
+                codigo: "29340",
+                marca: "Mercedes Benz",
+                modelo: "Sprinter 313 2002/2013",
+                precio: "$25.000",
+                stock: "3",
+                desc: "Manguera intercooler para Mercedes Benz Sprinter 313.",
+                img: "Images/goautos_big_publicaciones_29340_1741956345_1_877.jpg"
+            }
+        };
+
+        // Leer ID desde la URL
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        // Cargar info del producto
+        if (productos[id]) {
+            const p = productos[id];
+            document.getElementById("producto-img").src = p.img;
+            document.getElementById("producto-nombre").textContent = p.nombre;
+            document.getElementById("producto-codigo").textContent = p.codigo;
+            document.getElementById("producto-marca").textContent = p.marca;
+            document.getElementById("producto-modelo").textContent = p.modelo;
+            document.getElementById("producto-precio").textContent = p.precio;
+            document.getElementById("producto-stock").textContent = p.stock;
+            document.getElementById("producto-desc").textContent = p.desc;
+        } else {
+            document.body.innerHTML = "<p>Producto no encontrado. <a href='index.html'>Volver a productos</a></p>";
+        }
+    </script>
+
+</body>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <a href="index.php" class="logo">
+                <img src="Images/logo_goautos.jpg" alt="Go Autos" />
+            </a>
+            <nav class="menu">
+                <ul>
+                    <li><a href="https://goautos.com.ar/clasificados">Clasificados</a></li>
+                    <li><a href="https://goautos.com.ar/en-tu-zona">En tu zona</a></li>
+                    <li><a href="https://goautos.com.ar/go-concesionarios">Concesionarios</a></li>
+                    <li><a href="https://goautos.com.ar/servicios">Servicios</a></li>
+                    <li><a href="https://goautos.com.ar/contacto">Contacto</a></li>
+                    <button>VENDER</button>
+                    <button id="boton2">INICIAR SESIÓN</button>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                El uso de este sitio web implica la aceptación de los
+                Términos y Condiciones y de las Políticas de Privacidad de goautos.com.ar <br>
+
+                ©2015-2025 goautos.com.ar. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+</html>
