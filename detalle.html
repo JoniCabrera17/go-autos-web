@@ -44,19 +44,51 @@
     <a href="index.html" class="volver">← Volver a Productos</a>
 
     <div class="producto-detalle">
-        <img id="producto-img" src="" alt="Producto">
-        <div class="info">
-            <h2 id="producto-nombre"></h2>
-            <p><b>Código/SKU:</b> <span id="producto-codigo"></span></p>
-            <p><b>Marca Vehículo:</b> <span id="producto-marca"></span></p>
-            <p><b>Modelo:</b> <span id="producto-modelo"></span></p>
-            <p><b>Diametro:</b> <span id="producto-modelo"></span></p>
-            <p><b>N° Planos:</b> <span id="producto-modelo"></span></p>
-            <p><b>Precio Lista:</b> <span id="producto-precio"></span></p>
-            <p><b>Stock:</b> <span id="producto-stock"></span></p>
-            <p><b>Descripción:</b> <span id="producto-desc"></span></p>
+        <div class="producto-img">
+            <img id="producto-img" src="" alt="Producto">
+        </div>
+        <div class="columna-derecha">
+            <div class="info">
+                <h2 id="producto-nombre"></h2>
+                <p><b>Código/SKU:</b> <span id="producto-codigo"></span></p>
+                <p><b>Marca Vehículo:</b> <span id="producto-marca"></span></p>
+                <p><b>Modelo:</b> <span id="producto-modelo"></span></p>
+                <p><b>Diametro:</b> <span id="producto-modelo"></span></p>
+                <p><b>N° Planos:</b> <span id="producto-modelo"></span></p>
+                <p><b>Precio Lista:</b> <span id="producto-precio"></span></p>
+                <p><b>Stock:</b> <span id="producto-stock"></span></p>
+                <p><b>Descripción:</b> <span id="producto-desc"></span></p>
+            </div>
+            <aside class="contacto2">
+                <h4>ENVIAR MENSAJE AL VENDEDOR</h4>
+                <form class="form-contacto" action="#" method="post">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                    <small class="sugerencia">Ingresá tu nombre completo</small>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 351 1234567" required>
+                    <small class="sugerencia">Incluí código de área</small>
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ej: usuario@gmail.com" required>
+                    <small class="sugerencia">Usá un email válido, lo necesitaremos para responderte</small>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos en qué estás interesado..."
+                        required></textarea>
+
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </aside>
         </div>
     </div>
+
+
+
+    <a href="https://wa.me/5493515523962" class="btn-whatsapp" target="_blank" aria-label="Contactar por WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
 
     <script>
         // Datos de ejemplo visuales (luego vendrán del backend)
@@ -113,7 +145,7 @@
         }
     </script>
 
-</body>
+
 
     <footer class="footer">
         <div class="container-footer">
@@ -142,5 +174,6 @@
             </p>
         </div>
     </footer>
+</body>
 
 </html>
