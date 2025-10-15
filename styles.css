@@ -302,7 +302,7 @@
 
 .producto-info h3,
 .producto-info p {
-  margin: 5px 0;
+  margin: px 0;
 }
 
 .contacto {
@@ -642,18 +642,55 @@
 .producto-detalle {
     display: grid;
     grid-template-columns: 1fr 1fr; /* dos columnas: imagen y detalle */
-    gap: 40px;
+    gap: 10px;
     align-items: start;
-      font-family: "Roboto";
+    font-family: "Roboto";
+    max-width: 1200px; /* limita el ancho total */
+    margin: 0 auto; /* centra horizontalmente */
+    padding: 20px; /* opcional: deja espacio interno */
 }
 
 #producto-nombre {
-  background-color: #512a42;
-  color: #b9b9b9;
+  color: #c41414;
   padding: 5px;
   border-radius: 5px;
   margin: 0px 0px 20px;
 }
+
+#consultaPrecio{
+  font-family: "Roboto";
+  color: #512a42;
+  font-weight: 800;
+
+}
+
+.tituloProducto {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* 👈 alinea los textos por su línea base tipográfica */
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f6f6f6;
+  border-radius: 6px;
+}
+
+/* Normaliza los dos h2 */
+.tituloProducto h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1; /* evita pequeñas diferencias de altura */
+  font-family: "Roboto", sans-serif;
+}
+
+.info p{
+    margin: 3px 0;   /* menos espacio vertical entre líneas */
+  line-height: 1; /* opcional, controla altura de línea */
+  font-size: 14px;  /* ajusta según tu diseño */
+}
+
+
 
 @media (max-width: 768px) {
   .producto-detalle {
