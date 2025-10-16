@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-        
+
 </head>
 
 <body>
@@ -26,8 +26,8 @@
                         <li><a href="https://goautos.com.ar/en-tu-zona">En tu zona</a></li>
                         <li><a href="https://goautos.com.ar/go-concesionarios">Concesionarios</a></li>
                         <li><a href="https://goautos.com.ar/servicios">Servicios</a></li>
-                        <li><button>VENDER</button></li>
-                        <li><button id="boton2">INICIAR SESIÓN</button></li>
+                        <li><button class="btnVender">VENDER</button></li>
+                        <li><button class="btnLogin">INICIAR SESIÓN</button></li>
 
                     </ul>
 
@@ -199,8 +199,8 @@
                     <li><a href="https://goautos.com.ar/go-concesionarios">Concesionarios</a></li>
                     <li><a href="https://goautos.com.ar/servicios">Servicios</a></li>
                     <li><a href="https://goautos.com.ar/contacto">Contacto</a></li>
-                    <button>VENDER</button>
-                    <button id="boton2">INICIAR SESIÓN</button>
+                    <button class="btnVender">VENDER</button>
+                    <button class="btnLogin">INICIAR SESIÓN</button>
                 </ul>
             </nav>
         </div>
@@ -216,6 +216,38 @@
     </footer>
 
     <script src="filtros.js"></script>
+
+    <script src="modal.js" defer></script>
+
+
+
+    <!-- 🟦 MODAL PERSONALIZADO -->
+    <div id="modal" class="modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="cerrarModal">&times;</button>
+            <h3>Iniciar Sesión</h3>
+            <form id="formLogin" action="registerUser" method="POST">
+                <label for="usuario">Correo o Usuario</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn-modal">Ingresar</button>
+
+                <p class="modal-texto">
+                    ¿Todavía no eres usuario?
+                    <a href="#" id="abrirRegistro">Registrate aquí</a>
+                </p>
+
+                <p class="modal-texto2">
+                    ¿Olvidaste tu contraseña?
+                    <a href="#" id="abrirRegistro">Recuperala aquí</a>
+                </p>
+            </form>
+        </div>
+    </div>
 
 
 </body>
