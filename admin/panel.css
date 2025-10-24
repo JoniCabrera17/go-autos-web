@@ -1,0 +1,215 @@
+/* === RESET BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === ESTRUCTURA GENERAL === */
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+header {
+  background-color: #005f9e;
+  background-image: repeating-linear-gradient(-45deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 5px,
+      transparent 5px);
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.panel-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* === FORMULARIO === */
+.formulario {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.formulario h2 {
+  margin-bottom: 20px;
+  color: #005f9e;
+  text-align: center;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.campo input[type="text"],
+.campo input[type="number"],
+.campo textarea,
+.campo input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #005f9e;
+  outline: none;
+}
+
+/* === BOTONES === */
+.botones {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s ease;
+}
+
+.btn-guardar {
+  background-color: #512a42;
+  color: white;
+}
+
+.btn-guardar:hover {
+  background-color: #005f9e;
+}
+
+.btn-limpiar {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-limpiar:hover {
+  background-color: #c41414;
+  color: #ddd;
+}
+
+/* === PREVISUALIZACIÓN DE IMÁGENES === */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.preview-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* === TABLA DE PRODUCTOS === */
+.tabla-productos {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tabla-productos h2 {
+  color: #005f9e;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #005f9e;
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: #f1f9ff;
+}
+
+td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* === ACCIONES === */
+.btn-editar, .btn-eliminar {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-editar {
+  background-color: #ffb703;
+  color: #222;
+}
+
+.btn-editar:hover {
+  background-color: #e09a00;
+}
+
+.btn-eliminar {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background-color: #b71c1c;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .panel-container {
+    grid-template-columns: 1fr;
+  }
+
+  th, td {
+    font-size: 13px;
+  }
+
+  .preview-grid img {
+    height: 80px;
+  }
+}

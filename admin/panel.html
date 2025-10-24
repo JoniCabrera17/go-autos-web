@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Productos - Go Autos</title>
+  <link rel="stylesheet" href="panel.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Panel de Productos</h1>
+  </header>
+
+  <section class="panel-container">
+    <!-- FORMULARIO DE ALTA / EDICIÓN -->
+    <form id="formProducto" enctype="multipart/form-data" class="formulario">
+      <h2 id="tituloForm">Agregar / Editar Producto</h2>
+      <input type="hidden" id="id" name="id" />
+
+      <!-- CAMPOS SELECT -->
+      <div class="campo">
+        <label for="categoria">Familia / Categoría *</label>
+        <select id="categoria" name="categoria" required>
+          <option value="">Seleccionar...</option>
+          <option value="Manguera">Manguera</option>
+          <option value="Bomba de Agua">Bomba de Agua</option>
+          <option value="Depósito">Depósito</option>
+          <option value="Correa">Correa</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="clasificacion">Clasificación *</label>
+        <select id="clasificacion" name="clasificacion" required>
+          <option value="">Seleccionar...</option>
+          <option value="Leve">Leve</option>
+          <option value="Pesado">Pesado</option>
+          <option value="Agrícola">Agrícola</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="carroceria">Tipo de Carrocería</label>
+        <select id="carroceria" name="carroceria">
+          <option value="">Seleccionar...</option>
+          <option value="Auto y SUV">Auto y SUV</option>
+          <option value="Camión o Bus">Camión o Bus</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="proveedor">Marca / Proveedor</label>
+        <select id="proveedor" name="proveedor">
+          <option value="">Seleccionar...</option>
+          <option value="Cauplas">Cauplas</option>
+          <option value="Saxum">Saxum</option>
+          <option value="Florio">Florio</option>
+          <option value="Continental">Continental</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="uso">Uso</label>
+        <select id="uso" name="uso">
+          <option value="">Seleccionar...</option>
+          <option value="Calefacción">Calefacción</option>
+          <option value="Distribución">Distribución</option>
+          <option value="Refrigeración">Refrigeración</option>
+        </select>
+      </div>
+
+      <!-- CAMPOS DE TEXTO / NUMÉRICOS -->
+      <div class="campo">
+        <label for="nombre">Nombre del Producto *</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+
+      <div class="campo">
+        <label for="codigo">Código / SKU</label>
+        <input type="text" id="codigo" name="codigo" />
+      </div>
+
+      <div class="campo">
+        <label for="precio">Precio</label>
+        <input type="number" id="precio" name="precio" min="0" step="0.01" />
+      </div>
+
+      <div class="campo">
+        <label for="stock">Stock disponible</label>
+        <input type="number" id="stock" name="stock" min="0" />
+      </div>
+
+      <div class="campo">
+        <label for="descripcion">Descripción / Detalle</label>
+        <textarea id="descripcion" name="descripcion" rows="3"></textarea>
+      </div>
+
+      <!-- IMÁGENES MÚLTIPLES -->
+      <div class="campo">
+        <label for="imagenes">Imágenes del producto</label>
+        <input type="file" id="imagenes" name="imagenes[]" accept="image/*" multiple />
+        <div id="previewContainer" class="preview-grid"></div>
+      </div>
+
+      <div class="botones">
+        <button type="submit" class="btn-guardar">💾 Guardar</button>
+        <button type="button" class="btn-limpiar" onclick="limpiarFormulario()">🧹 Limpiar</button>
+      </div>
+    </form>
+
+    <!-- TABLA DE PRODUCTOS -->
+    <section class="tabla-productos">
+      <h2>Listado de Productos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Categoría</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Imágenes</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaProductos"></tbody>
+      </table>
+    </section>
+  </section>
+
+  <script src="panel.js"></script>
+</body>
+</html>
